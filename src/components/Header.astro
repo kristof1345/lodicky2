@@ -1,0 +1,58 @@
+---
+import logo from "../assets/boat_logo.svg";
+import "../styles/global.css";
+---
+
+<header>
+  <div id="logo-container">
+    <img src={logo.src} alt="Site Logo">
+    <h1>NL Lodicky</h1>
+  </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/boat">Boat</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    border-bottom: 1px solid rgba(65, 129, 249, 0.192);
+  }
+
+  #logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  #logo-container img {
+    width: 33px;
+    height: 33px;
+    margin: 0.1rem 1rem 0.1rem 0.5rem;
+  }
+
+  #logo-container h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  nav a:hover {
+    border-bottom: 2px solid rgb(65, 129, 249)
+  }
+
+  @media (max-width: 500px) {
+    #logo-container h1 {
+      display: none;
+    }
+  }
+</style>

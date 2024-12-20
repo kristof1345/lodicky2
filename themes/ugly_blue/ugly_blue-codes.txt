@@ -1,0 +1,11 @@
+Your selected colors:
+
+    Text: #050506 - rgb(5, 5, 6) - hsl(240, 9%, 2%)
+    Background: #fafbfb - rgb(250, 251, 251) - hsl(180, 11%, 98%)
+    Primary: #6291a6 - rgb(98, 145, 166) - hsl(199, 28%, 52%)
+    Secondary: #97c0d3 - rgb(151, 192, 211) - hsl(199, 41%, 71%)
+    Accent: #73b7d5 - rgb(115, 183, 213) - hsl(198, 54%, 64%)
+
+Realtime Colors link for selected colors: https://www.realtimecolors.com/?colors=050506-fafbfb-6291a6-97c0d3-73b7d5&fonts=Inter-Inter
+
+Thanks for using RealtimeColors.com!
