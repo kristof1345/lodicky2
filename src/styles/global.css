@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: rgb(9, 11, 15);
 }
 
 a,
@@ -18,4 +19,16 @@ div {
 body,
 html {
   background-color: #fbfcfd;
+}
+
+.container {
+  margin: 0 70px;
+  padding: 35px 0 35px 0;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 0 20px;
+    padding: 35px 0 35px 0;
+  }
 }
