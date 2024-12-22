@@ -1,10 +1,187 @@
 ---
 import Header from "../../components/Header.astro";
+import Front1 from "../../assets/renegade/front1.webp";
+import Front2 from "../../assets/renegade/front2.webp";
+import Front3 from "../../assets/renegade/front3.webp";
+import FrontAxo from "../../assets/renegade/front_axo.webp";
 ---
 
 <div id="container">
 	<Header />
   <main>
-    This is the Renegade Page
+    <section id="sec-one">
+      <div class="slideshow-container">
+        <div class="holder">
+          <div class="mySlides fade">
+            <img
+              src={Front3.src}
+              class="slide-img"
+              alt="Zavážacia loďka Renegade"
+            />
+          </div>
+    
+          <div class="mySlides fade" style="z-index: -5;">
+            <img
+              src={Front1.src}
+              class="slide-img"
+              alt="Zavážacia loďka Renegade"
+            />
+          </div>
+    
+          <div class="mySlides fade" style="z-index: -5;">
+            <img
+              src={Front2.src}
+              class="slide-img"
+              alt="Zavážacia loďka Renegade"
+            />
+          </div>
+    
+          <div class="mySlides fade" style="z-index: -5;">
+            <img
+              src={FrontAxo.src}
+              class="slide-img"
+              alt="Zavážacia loďka Renegade"
+            />
+          </div>
+        </div>
+  
+        <span id="prev">❮</span>
+        <span id="next">❯</span>
+      </div>
+
+      <div class="intro">
+        <h1>Zavážacia loďka Renegade</h1>
+      </div>
+    </section>
   </main>
 </div>
+
+<script>
+let slides = document.getElementsByClassName("mySlides");
+let current_slide = 1;
+let max_slides = slides.length;
+
+document.getElementById("prev")?.addEventListener("click", () => {
+  if (current_slide == 1) {
+    current_slide = max_slides;
+  } else {
+    current_slide--;
+  }
+
+  render();
+})
+
+document.getElementById("next")?.addEventListener("click", () => {
+  if (current_slide == max_slides) {
+    current_slide = 1;
+  } else {
+    current_slide++;
+  }
+
+  render();
+})
+
+function render() {
+  for (let i = 0; i < max_slides; i++) {
+    slides[i].style.zIndex = -5;
+  }
+
+  slides[current_slide - 1].style.zIndex = 1;
+}
+</script>
+
+<style>
+#sec-one {
+  display: flex;
+  padding: 50px 70px;
+}
+
+.intro {
+  /* flex-basis: 60%; */
+  flex-grow: 1;
+}
+
+  /* Slideshow container */
+.slideshow-container {
+  /* min-width: 650px; */
+  flex-grow: 1;
+  flex-basis: 38%;
+  /* min-height: 500px; */
+  position: relative;
+  /* margin: auto; */
+}
+
+.mySlides {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.slide-img {
+  width: auto;
+  height: 450px;
+  object-fit: contain;
+}
+
+.holder {
+  height: 450px;
+}
+
+
+/* Next & previous buttons */
+#prev,
+#next {
+  cursor: pointer;
+  position: absolute;
+  top: 455px;
+  width: auto;
+  padding: 8px 15px;
+  color: rgb(61, 57, 57);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  /* border-radius: 0 3px 3px 0; */
+  border-radius: 3px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+#next {
+  right: 43%;
+  /* border-radius: 3px 0 0 3px; */
+}
+
+#prev {
+  left: 43%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+</style>

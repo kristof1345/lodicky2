@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Header from "../../components/Header.astro";
 import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
+import Transparent from "../../assets/renegade/front3.webp";
 ---
 
 <div >
@@ -12,11 +13,13 @@ import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
       <div id="container">
         <a href="/renegade" class="grid-item">
           <div class="img-holder">
-            <Image class="image" src={RenegadeImage} alt="Zavážacie loďka Renegade" loading="eager"/>
+            <Image class="image" src={Transparent} alt="Zavážacie loďka Renegade" loading="eager"/>
           </div>
           <div class="content-holder">
-            <h2>Zavážacie loďka Renegade</h2>
-            <span class="availability">Skladom</span>
+            <span>  <!--Remove this is you want availability to be further from boat name -->
+              <h2>Zavážacie loďka Renegade</h2>
+              <span class="availability">Skladom</span>
+            </span>
             <span class="price">€1 299</span>
             <div class="features">
               <span class="feature">
@@ -32,82 +35,8 @@ import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
                 Autopilot
                 &#x2705;
               </span>
-            </div>
-            <p class="desc">Renegade je inteligentná zavažacia lodička vytvorená pre kaprárov, ktorí chcú loviť ťažko dostupné miesta. Zabudovaný sonar vám umožní vidieť hĺbku vody a nájsť miesta, kde veľké kapry...</p>
-          </div>
-        </a>
-        <a href="/renegade" class="grid-item">
-          <div class="img-holder">
-            <Image class="image" src={RenegadeImage} alt="Zavážacie loďka Renegade" loading="eager"/>
-          </div>
-          <div class="content-holder">
-            <h2>Zavážacie loďka Renegade</h2>
-            <span class="availability">Skladom</span>
-            <span class="price">€1 299</span>
-            <div class="features">
               <span class="feature">
-                GPS
-                <!-- &#x2713; -->
-                &#x2705;
-              </span>
-              <span class="feature">
-                Sonar
-                &#x2705;
-              </span>
-              <span class="feature">
-                Autopilot
-                &#x2705;
-              </span>
-            </div>
-            <p class="desc">Renegade je inteligentná zavažacia lodička vytvorená pre kaprárov, ktorí chcú loviť ťažko dostupné miesta. Zabudovaný sonar vám umožní vidieť hĺbku vody a nájsť miesta, kde veľké kapry...</p>
-          </div>
-        </a>
-        <a href="/renegade" class="grid-item">
-          <div class="img-holder">
-            <Image class="image" src={RenegadeImage} alt="Zavážacie loďka Renegade" loading="eager"/>
-          </div>
-          <div class="content-holder">
-            <h2>Zavážacie loďka Renegade</h2>
-            <span class="availability">Skladom</span>
-            <span class="price">€1 299</span>
-            <div class="features">
-              <span class="feature">
-                GPS
-                <!-- &#x2713; -->
-                &#x2705;
-              </span>
-              <span class="feature">
-                Sonar
-                &#x2705;
-              </span>
-              <span class="feature">
-                Autopilot
-                &#x2705;
-              </span>
-            </div>
-            <p class="desc">Renegade je inteligentná zavažacia lodička vytvorená pre kaprárov, ktorí chcú loviť ťažko dostupné miesta. Zabudovaný sonar vám umožní vidieť hĺbku vody a nájsť miesta, kde veľké kapry...</p>
-          </div>
-        </a>
-        <a href="/renegade" class="grid-item">
-          <div class="img-holder">
-            <Image class="image" src={RenegadeImage} alt="Zavážacie loďka Renegade" loading="eager"/>
-          </div>
-          <div class="content-holder">
-            <h2>Zavážacie loďka Renegade</h2>
-            <span class="availability">Skladom</span>
-            <span class="price">€1 299</span>
-            <div class="features">
-              <span class="feature">
-                GPS
-                <!-- &#x2713; -->
-                &#x2705;
-              </span>
-              <span class="feature">
-                Sonar
-                &#x2705;
-              </span>
-              <span class="feature">
-                Autopilot
+                Slovenský menu
                 &#x2705;
               </span>
             </div>
