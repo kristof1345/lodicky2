@@ -122,9 +122,9 @@ import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
 <style>
   #container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    gap: 5%;
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    gap: 50px;
+    grid-auto-rows: minmax(550px, auto);  /*minmax(100px, auto)*/
     padding-top: 30px;
   }
 
@@ -139,10 +139,12 @@ import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
     border-radius: 0.75rem;
   }
 
-  .grid-item:hover {
-    -webkit-box-shadow: 0px 0px 44px -35px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 44px -35px rgba(0,0,0,1);
-    box-shadow: 0px 0px 44px -35px rgba(0,0,0,1);
+  .grid-item:hover .image {
+    transform: scale(1.05)
+  }
+
+  .grid-item:hover h2 {
+    text-decoration: underline;
   }
 
   section h1 {
@@ -151,13 +153,16 @@ import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
   }
 
   .img-holder {
-    width: fit-content;
+    overflow: hidden;
+    border-radius: 0.75rem;
   }
 
   .image {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 0.75rem;
+    object-fit: cover; /* Ensures the image fills the card while maintaining aspect ratio */
+    transition: transform 0.3s ease-in-out;
   }
 
   .content-holder {
@@ -209,6 +214,16 @@ import RenegadeImage from "../../assets/renegade/shore3_fitted.webp";
   @media (max-width: 500px) {
     section h1 {
       font-size: 1.75rem;
+    }
+    #container {
+      gap: 35px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    #container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+      gap: 30px;
     }
   }
   </style>

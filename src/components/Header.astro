@@ -1,6 +1,9 @@
 ---
 import logo from "../assets/boat_logo.svg";
 import "../styles/global.css";
+import Hamburger from "../assets/hamburger.svg";
+import Close from "../assets/close.svg";
+import Image from "astro/components/Image.astro";
 ---
 
 <header>
@@ -8,11 +11,35 @@ import "../styles/global.css";
     <img src={logo.src} alt="Site Logo">
     <h1>NL Lodicky</h1>
   </div>
-  <nav>
+  <nav id="desktop">
     <a href="/">Domov</a>
     <a href="/lodky">Zavážacie loďky</a>
   </nav>
+  <div id="mobile">
+    <img src={Hamburger.src} alt="Menu" id="hamburger" />
+    <nav id="mobile-nav">
+      <img src={Close.src} alt="Close" id="close" />
+      <a href="/">Domov</a>
+      <a href="/lodky">Zavážacie loďky</a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const close = document.getElementById("close");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  hamburger.addEventListener("click", () => {
+    mobileNav.style.display = "flex";
+    document.body.classList.add('menu-open');
+  });
+
+  close.addEventListener("click", () => {
+    mobileNav.style.display = "none";
+    document.body.classList.remove('menu-open');
+  });
+</script>
 
 <style>
   header {
@@ -40,10 +67,18 @@ import "../styles/global.css";
     margin: 0;
   }
 
-  nav a {
+  #desktop a {
     margin-right: 1rem;
     text-decoration: none;
     color: #333;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  body.menu-open {
+    overflow: hidden; /* Disable scrolling */
   }
 
   nav a:hover {
@@ -53,6 +88,45 @@ import "../styles/global.css";
   @media (max-width: 500px) {
     #logo-container h1 {
       display: none;
+    }
+
+    #desktop {
+      display: none;
+    }
+
+    #mobile {
+      display: flex;
+      justify-content: center;
+    }
+
+    #hamburger, #close {
+      width: 30px;
+      height: 30px;
+    }
+
+    #close {
+      position: absolute;
+      top: 15px;
+      right: 8px;
+    }
+
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+    }
+
+    #mobile-nav a {
+      text-decoration: none;
+      font-size: 18px;
     }
   }
 </style>
