@@ -8,12 +8,13 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
   <main class="container">
     <div class="center-sec">
       <section id="sec-one">
+        <h1 class="mobile-h1">Zavážacia loďka Renegade</h1>
         <RenegadeSlider />
   
         <div class="intro">
-          <h1>Zavážacia loďka Renegade</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <h1 class="desktop-h1">Zavážacia loďka Renegade</h1>
+          <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
       </section>
     </div>
@@ -26,24 +27,28 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
   margin: 0 30px;
 }
 
+h1.mobile-h1 {
+  display: none;
+  padding-bottom: 15px;
+}
 
 #sec-one {
   display: flex;
   /* align-items: center; */
   justify-content: space-between;
   padding: 35px 0px 50px 0px;
-  gap: 10px;
+  gap: 25px;
   width: 1200px;
   margin:  0 auto 0 auto;
 }
 
 .intro {
-  width: 580px;
+  flex-grow: 1;
 }
 
 @media (max-width: 1270px) {
   .container {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 
   #sec-one {
@@ -51,30 +56,49 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
   }
 
   .intro {
-    width: 480px;
+    /* width: 480px; */
   }
 }
 
 @media (max-width: 1040px) {
+  h1.mobile-h1 {
+    display: block;
+    font-size: 2.75rem;
+    font-weight: 500;
+  }
+
+  h1.desktop-h1 {
+    display: none;
+  }
+
   #sec-one {
     flex-direction: column;
-    gap: 70px;
+    padding-top: 0;
+    gap: 0px;
     width: 650px;
   }
 
   .intro {
+    padding-top: 70px;
     width: 100%;
   }
 }
 
 @media (max-width: 750px) {
-  .container {
-    margin: 0 20px;
-  }
 
   #sec-one {
-    gap: 100px;
+    gap: 0px;
     width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 0 10px;
+  }
+
+  h1.mobile-h1 {
+    font-size: 2.25rem;
   }
 }
 </style>
