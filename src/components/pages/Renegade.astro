@@ -21,8 +21,46 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
           Autopilotom, ktorý pamätá polohu vášho lovného miesta.
           </p>
           <p class="para">
-            Dostupnosť<span class="spacer"> - - - - - - </span>
+            Dostupnosť<span class="spacer"> - - - - - </span>
             <span class="availability">Skladom</span>
+          </p>
+          <p class="price">
+            €1 299
+          </p>
+          <p class="para">Vybavenie loďky:</p>
+          <div class="features">
+            <span class="feature">
+              GPS
+              <!-- &#x2713; -->
+              &#x2705;
+            </span>
+            <span class="feature">
+              Sonar
+              &#x2705;
+            </span>
+            <span class="feature">
+              Autopilot
+              &#x2705;
+            </span>
+            <span class="feature">
+              Slovenský menu
+              &#x2705;
+            </span>
+            <span class="feature">
+              Farebný displej
+              &#x2705;
+            </span>
+            <span class="feature">
+              All-in-one ovládač
+              &#x2705;
+            </span>
+            <span class="feature">
+              Smart funkcie
+              &#x2705;
+            </span>
+          </div>
+          <p class="para desc-buy">
+            Ľoďku viete nakúpiť alebo vyskúšať(zadarmo) s kontaktovaním čísla: +421 903 763 327
           </p>
         </div>
       </section>
@@ -40,8 +78,40 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
   line-height: 1.7;
 }
 
+.para {
+  margin-bottom: 15px;
+}
+
 .desc {
-  margin-bottom: 12px
+  margin-bottom: 15px
+}
+
+.desc-buy {
+  font-weight: 600; 
+  font-size: 18px; 
+  margin-top: 30px;
+}
+
+.features {
+  display:flex;
+  gap:10px;
+  /* justify-content: center; */
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.feature {
+  /* background-color: rgba(125, 164, 238, 0.5); */
+  background-color: rgba(125, 164, 238, 0.307);
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.price {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
 h1.mobile-h1 {
@@ -96,8 +166,26 @@ h1.mobile-h1 {
     width: 1000px;
   }
 
-  .intro {
-    /* width: 480px; */
+  .desc-buy {
+    margin-top: 25px;
+  }
+
+  .features {
+    gap:8px;
+  }
+
+  .feature {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .desktop-h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
   }
 }
 
@@ -112,6 +200,10 @@ h1.mobile-h1 {
     display: none;
   }
 
+  .desc-buy {
+    margin-top: 30px;
+  }
+
   #sec-one {
     flex-direction: column;
     padding-top: 0;
@@ -120,7 +212,7 @@ h1.mobile-h1 {
   }
 
   .intro {
-    padding-top: 70px;
+    padding-top: 25px;
     width: 100%;
   }
 }
