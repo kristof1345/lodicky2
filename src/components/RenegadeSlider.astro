@@ -4,8 +4,8 @@ import Front1Small from "../assets/renegade/front1_small.webp";
 import Front2Small from "../assets/renegade/front2_small.webp";
 import Front3Small from "../assets/renegade/front3_small.webp";
 import ProtectorSmall from "../assets/renegade/protector_small.webp";
-import LeftArrow from "../assets/arrow-left.svg";
-import RightArrow from "../assets/arrow-right.svg";
+import LeftArrow from "../assets/arrow-left2.svg";
+import RightArrow from "../assets/arrow-right2.svg";
 import Image from "astro/components/Image.astro";
 ---
 
@@ -145,7 +145,7 @@ import Image from "astro/components/Image.astro";
 <style>
 
 #imag {
-  max-height: 600px;
+  max-height: 550px;
   max-width: 100%;
   border-radius: 0.5rem;
   user-select: none;
@@ -153,7 +153,7 @@ import Image from "astro/components/Image.astro";
 
 .holder {
   text-align: center;
-  width: 580px;
+  width: 650px;
   overflow: hidden;
   border-radius: 0.5rem;
 }
@@ -232,6 +232,16 @@ import Image from "astro/components/Image.astro";
   user-select: none;
 }
 
+@media (max-width: 1450px) {
+  #imag {
+  max-height: 550px;
+}
+
+.holder {
+  width: 580px;
+}
+}
+
 @media (max-width: 1040px) {
   .holder {
     width: 100%;
@@ -243,6 +253,4 @@ import Image from "astro/components/Image.astro";
     width: 100%;
   }
 }
-
-
 </style>
