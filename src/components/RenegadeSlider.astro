@@ -1,5 +1,9 @@
 ---
 import Front1 from "../assets/renegade/front1.webp";
+import Front1Small from "../assets/renegade/front1_small.webp";
+import Front2Small from "../assets/renegade/front2_small.webp";
+import Front3Small from "../assets/renegade/front3_small.webp";
+import ProtectorSmall from "../assets/renegade/protector_small.webp";
 import LeftArrow from "../assets/arrow-left.svg";
 import RightArrow from "../assets/arrow-right.svg";
 import Image from "astro/components/Image.astro";
@@ -7,45 +11,135 @@ import Image from "astro/components/Image.astro";
 
 <div class="slideshow-container">
   <div class="holder">
-    <img src={Front1.src} id="imag" alt="Renegade" data-img="1"/>
+    <img src={Front1.src} id="imag" alt="Renegade" data-img="1" loading="eager"/>
+
+    <div id="preview-container">
+      <div id="preview">
+        <div class="preview-holder" style="border: 1px solid rgba(125, 164, 238, 0.407);">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="0" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front2Small} class="preview-image" alt="renegade" data-nth="1" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front3Small} class="preview-image" alt="renegade" data-nth="2" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={ProtectorSmall} class="preview-image" alt="renegade" data-nth="3" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front3Small} class="preview-image" alt="renegade" data-nth="4" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={ProtectorSmall} class="preview-image" alt="renegade" data-nth="5" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="6" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="7" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="8" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="9" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="10" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="11" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="12" loading="eager"/>
+        </div>
+      </div>
+    </div>
 
     <div class="controls">
       <button id="prev">
-        <Image src={LeftArrow} alt="Previous" />
+        <Image src={LeftArrow} alt="Previous" loading="eager" />
       </button>
       <button id="next">
-        <Image src={RightArrow} alt="Next" />
+        <Image src={RightArrow} alt="Next" loading="eager" />
       </button>
     </div>
   </div>
 </div>
 
 <script type="module" defer>
-  let images = ["/renegade/front1.webp", "/renegade/front2.webp", "/renegade/front3.webp", "/renegade/protector.webp"];
+  let images = ["/renegade/front1.webp", "/renegade/front2.webp", "/renegade/front3.webp", "/renegade/protector.webp", "/renegade/front3.webp", "/renegade/protector.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp"];
+  let previewImages = document.querySelectorAll(".preview-image");
+  let img = document.getElementById("imag");
+  const next = document.getElementById("next");
+  const prev = document.getElementById("prev");
+  const row = document.getElementById("preview");
 
-  document.getElementById("next").addEventListener("click", () => {
-    let img = document.getElementById("imag");
-
-    if (img.dataset.img === images.length.toString()) {
-      img.src = images[0];
-      img.dataset.img = "1";
-    } else {
-      img.src = images[(img.dataset.img - 1) + 1];
-      img.dataset.img++;
-    }
+  previewImages.forEach((preview) => {
+    preview.addEventListener("click", () => {
+      img.src = images[preview.dataset.nth];
+      removeBorders();
+      preview.parentElement.style.border = "1px solid rgba(125, 164, 238, 0.407)";
+    })
   })
 
-  document.getElementById("prev").addEventListener("click", () => {
-    let img = document.getElementById("imag");
+  function removeBorders() {
+    previewImages.forEach((preview) => {
+      preview.parentElement.style.border = "1px solid white";
+    })
+  }
 
-    if (img.dataset.img === "1") {
-      img.src = images[images.length - 1];
-      img.dataset.img = images.length.toString();
-    } else {
-      img.src = images[(img.dataset.img - 1) - 1];
-      img.dataset.img--;
+  let scrollAmount = 0;
+  const scrollStep = 300;
+
+  // Event listener for the next button
+  next.addEventListener('click', () => {
+    const maxScroll = row.scrollWidth - row.parentElement.clientWidth;
+    if (scrollAmount < maxScroll) {
+      scrollAmount += scrollStep;
+      if (scrollAmount > maxScroll) {
+        scrollAmount = maxScroll;
+        next.style.display = "none";
+      }
+      row.style.transform = `translateX(-${scrollAmount}px)`;
+      prev.style.display = "flex";
     }
-  })
+  });
+
+  // Event listener for the previous button
+  prev.addEventListener('click', () => {
+    if (scrollAmount > 0) {
+      scrollAmount -= scrollStep;
+      if (scrollAmount < 0) {
+        scrollAmount = 0
+        prev.style.display = "none";
+      };
+      row.style.transform = `translateX(-${scrollAmount}px)`;
+      next.style.display = "flex";
+    }
+  });
+
+
+  // document.getElementById("next").addEventListener("click", () => {
+  //   if (img.dataset.img === images.length.toString()) {
+  //     img.src = images[0];
+  //     img.dataset.img = "1";
+  //   } else {
+  //     img.src = images[(img.dataset.img - 1) + 1];
+  //     img.dataset.img++;
+  //   }
+  // })
+
+  // document.getElementById("prev").addEventListener("click", () => {
+  //   if (img.dataset.img === "1") {
+  //     img.src = images[images.length - 1];
+  //     img.dataset.img = images.length.toString();
+  //   } else {
+  //     img.src = images[(img.dataset.img - 1) - 1];
+  //     img.dataset.img--;
+  //   }
+  // })
 </script>
 
 <style>
@@ -54,6 +148,7 @@ import Image from "astro/components/Image.astro";
   max-height: 600px;
   max-width: 100%;
   border-radius: 0.5rem;
+  user-select: none;
 }
 
 .holder {
@@ -67,10 +162,11 @@ import Image from "astro/components/Image.astro";
   display: flex;
   justify-content: center;
   gap: 5px;
+  margin-top: 7px;
 }
 
 #next, #prev {
-  background-color: #f1f1f1;
+  background-color: rgba(125, 164, 238, 0.207);
   color: black;
   cursor: pointer;
   padding: 10px;
@@ -80,11 +176,60 @@ import Image from "astro/components/Image.astro";
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+}
+
+#prev {
+  display: none;
+}
+
+#next:hover, #prev:hover {
+  background-color: rgba(125, 164, 238, 0.307);
 }
 
 #next img, #prev img {
   width: 30px;
   height: 30px;
+  user-select: none;
+}
+
+#preview-container {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#preview-container::-webkit-scrollbar {
+  display: none;
+}
+
+#preview {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.5s ease;
+  user-select: none;
+  /* border-radius: 5px; */
+}
+
+.preview-holder {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.207);
+}
+
+.preview-holder:hover {
+  border: 1px solid rgba(125, 164, 238, 0.407);
+}
+
+#preview img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
 }
 
 @media (max-width: 1040px) {
