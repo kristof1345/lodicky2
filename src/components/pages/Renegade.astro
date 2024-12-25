@@ -65,6 +65,67 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
         </div>
       </section>
     </div>
+    
+    <div class="center-sec">
+      <section id="sec-two">
+        <h2>Popis loďky</h2>
+        <div class="video-holder">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gJLUwQHSzZY?si=vaMuV0om6W5XWWLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h3>Technické Údaje</h3>
+
+        <ul class="content-bullets">
+          <li class="content-bullet boldb">
+            Li-ion batérie 2 x 12,6V/15,6Ah(viem dodať aj silnejšie, až 24Ah),
+            výdrž na jedno nabitie je 6-7 hodín.
+          </li>
+          <li class="content-bullet">
+            2 komory s nosnosťou 4kg ktoré sa otvárajú zospodu buď naraz alebo
+            jednotlivo.
+          </li>
+          <li class="content-bullet boldb">
+            Loďka je vybavená s farebným sonárom s hĺbkovou detekciou do 70m,
+            ktorý identifikuje štruktúru dna, hĺbku vody a lokalitu ryby.
+            Displej sonára je zabudovaný do ovládača.
+          </li>
+          <li class="content-bullet">
+            Vďaka GPS a Autopilot viete uložiť 30 pozicií, ktoré loďka vie veľmi
+            presne najsť.
+          </li>
+          <li class="content-bullet boldb">
+            1 hák na montáž je v zadu, ktorý je možno vypustiť jednotlivo alebo
+            naraz.
+          </li>
+          <li class="content-bullet">
+            Loďka má radioový systém s 2,4Ghz s dosahom 500 metrov.
+          </li>
+          <li class="content-bullet boldb">
+            Rýchlosť je 60/70 metrov za minutu.
+          </li>
+          <li class="content-bullet">
+            Rozmery: dĺžka 65cm, šírka 44cm, výška 24cm.
+          </li>
+          <li class="content-bullet boldb">Váha 8,5kg(s batériami).</li>
+          <li class="content-bullet">
+            Dá sa naprogramovať, aby automaticky otvoril komory, keď dorazí na
+            označení bod.
+          </li>
+          <li class="content-bullet boldb">
+            Lodičku treba nakalibrovať pred použitím GPS.
+          </li>
+          <li class="content-bullet">
+            Automatický návrat na “home point” pri strate signálu alebo keď sú
+            slabé batérie.
+          </li>
+          <li class="content-bullet boldb">Doprava zadarmo v rámci SR.</li>
+        </ul>
+
+        <h3>Balenie</h3>
+        <p class="para">Balenie: Lodička + prepravná taška, 2x Batérie, Nabýjačka pre lodičku a pre ovládač, Ovládač + ochranná taška.</p>
+
+      </section>
+    </div>
   </main>
 </div>
 
@@ -135,14 +196,54 @@ h1.mobile-h1 {
 #sec-one {
   display: flex;
   justify-content: space-between;
-  padding: 35px 0px 50px 0px;
+  padding: 35px 0px 60px 0px;
   gap: 35px;
   width: 1330px;
   margin:  0 auto 0 auto;
 }
 
+#sec-two {
+  margin: 0 auto 0 auto;
+  width: 820px;
+}
+
+#sec-two h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#sec-two h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 .intro {
   flex-grow: 1;
+}
+
+.content-bullets {
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+.content-bullet {
+  padding-bottom: 15px;
+}
+
+.boldb {
+  font-weight: 600;
+}
+
+.video-holder {
+  margin-bottom: 35px;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 3px;
 }
 
 @media (max-width: 1450px) {
@@ -211,6 +312,10 @@ h1.mobile-h1 {
     width: 650px;
   }
 
+  #sec-two {
+    width: 650px;
+  }
+
   .intro {
     padding-top: 25px;
     width: 100%;
@@ -223,6 +328,10 @@ h1.mobile-h1 {
     gap: 0px;
     width: 100%;
   }
+
+  #sec-two {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -232,6 +341,10 @@ h1.mobile-h1 {
 
   h1.mobile-h1 {
     font-size: 2.25rem;
+  }
+
+  iframe {
+    height: 300px;
   }
 }
 </style>
