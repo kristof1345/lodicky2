@@ -1,6 +1,9 @@
 ---
 import Header from "../../components/Header.astro";
+import Image from "astro/components/Image.astro";
 import RenegadeSlider from "../../components/RenegadeSlider.astro";
+import Front5 from "../../assets/renegade/front5.webp";
+import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
 ---
 
 <div id="container">
@@ -120,6 +123,21 @@ import RenegadeSlider from "../../components/RenegadeSlider.astro";
           </li>
           <li class="content-bullet boldb">Doprava zadarmo v rámci SR.</li>
         </ul>
+
+        <div class="image-sec">
+          <Image
+            src={Front5}
+            alt="renegade"
+            loading="lazy"
+            class="ren-image"
+          />
+          <Image
+            src={BackAxo2}
+            alt="renegade"
+            loading="lazy"
+            class="ren-image"
+          />
+        </div>
 
         <h3>Balenie</h3>
         <p class="para">Balenie: Lodička + prepravná taška, 2x Batérie, Nabýjačka pre lodičku a pre ovládač, Ovládač + ochranná taška.</p>
@@ -246,6 +264,17 @@ iframe {
   border-radius: 3px;
 }
 
+.image-sec {
+  width: 70%;
+  margin: 0px auto 30px auto;
+}
+
+.ren-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
 @media (max-width: 1450px) {
   .container {
     margin: 0 20px;
@@ -318,6 +347,10 @@ iframe {
 
   .intro {
     padding-top: 25px;
+    width: 100%;
+  }
+
+  .image-sec {
     width: 100%;
   }
 }
