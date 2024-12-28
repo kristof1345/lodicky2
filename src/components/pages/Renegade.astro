@@ -4,6 +4,13 @@ import Image from "astro/components/Image.astro";
 import RenegadeSlider from "../../components/RenegadeSlider.astro";
 import Front5 from "../../assets/renegade/front5.webp";
 import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
+import Rozmetadlo from "../../assets/renegade/rozmetadlo.jpg";
+import FrontWRemote from "../../assets/renegade/front_w_remote.webp";
+import FrontAxo from "../../assets/renegade/front_axo.webp";
+import FromTopSide from "../../assets/renegade/from_top_side.jpg";
+import Backside from "../../assets/renegade/backside.webp";
+import RenegadeFront from "../../assets/renegade/renegade_front2.webp"
+import FromSide from "../../assets/renegade/from_side.webp"
 ---
 
 <div id="container">
@@ -76,7 +83,7 @@ import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
       <section id="sec-two">
         <h2>Popis loďky</h2>
         <div class="video-holder">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/gJLUwQHSzZY?si=vaMuV0om6W5XWWLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/gJLUwQHSzZY?si=vaMuV0om6W5XWWLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <h3>Technické Údaje</h3>
@@ -125,6 +132,7 @@ import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
             slabé batérie.
           </li>
           <li class="content-bullet boldb">Doprava zadarmo v rámci SR.</li>
+          <li class="content-bullet">Vrtule sú chránené proti zamotaniu do silónu alebo vodných rastlín.</li>
         </ul>
 
         <div class="image-sec">
@@ -153,6 +161,14 @@ import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
         </div>
 
         <div class="content-sec">
+          <h3>Rozmery</h3>
+          <ul class="content-bullets">
+            <li class="content-bullet">Rozmery: dĺžka 65cm, šírka 44cm, výška 24cm.</li>
+            <li class="content-bullet">Váha: 8,5kg(s batériami)</li>
+          </ul>
+        </div>
+
+        <div class="content-sec">
           <h3>Balenie</h3>
           <p class="para">Balenie: Lodička + prepravná taška, 2x Batérie, Nabýjačka pre lodičku a pre ovládač, Ovládač + ochranná taška.</p>
         </div>
@@ -166,6 +182,57 @@ import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
             <li class="content-bullet">Podvodná kamera - 340€</li>
             <li class="content-bullet">Solárný panel - 190€</li>
           </ul>
+          <h4>Rozmetadlo</h4>
+          <div class="image-sec">
+            <Image
+            src={Rozmetadlo}
+            alt="renegade"
+            loading="lazy"
+              class="ren-image"
+            />
+          </div>
+        </div>
+        
+        <div class="content-">
+          <h3>Fotogaléria</h3>
+          <div class="image-sec">
+            <Image
+              src={RenegadeFront}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={FromSide}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={FrontWRemote}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image tall"
+            />
+            <Image
+            src={FromTopSide}
+            alt="renegade"
+            loading="lazy"
+            class="ren-image"
+            />
+            <Image
+              src={FrontAxo}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={BackAxo2}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image"
+            />
+          </div>
         </div>
 
       </section>
@@ -259,6 +326,12 @@ h1.mobile-h1 {
 
 #sec-two h3 {
   font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#sec-two h4 {
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 20px;
 }
