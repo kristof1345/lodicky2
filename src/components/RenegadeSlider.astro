@@ -1,9 +1,11 @@
 ---
-import Front1 from "../assets/renegade/front1.webp";
-import Front1Small from "../assets/renegade/front1_small.webp";
-import Front2Small from "../assets/renegade/front2_small.webp";
+import Front3 from "../assets/renegade/front3.webp";
+import BackTopSmall from "../assets/renegade/back_top_small.webp";
+import RenegadeFront2Small from "../assets/renegade/renegade_front2_small.webp";
 import Front3Small from "../assets/renegade/front3_small.webp";
+import FromSideSmall from "../assets/renegade/from_side_small.webp"
 import ProtectorSmall from "../assets/renegade/protector_small.webp";
+import BacksideSmall from "../assets/renegade/backside_small.webp"
 import LeftArrow from "../assets/arrow-left2.svg";
 import RightArrow from "../assets/arrow-right2.svg";
 import Image from "astro/components/Image.astro";
@@ -11,48 +13,24 @@ import Image from "astro/components/Image.astro";
 
 <div class="slideshow-container">
   <div class="holder">
-    <img src={Front1.src} id="imag" alt="Renegade" data-img="1" loading="eager"/>
+    <img src={Front3.src} id="imag" alt="Renegade" data-img="1" loading="eager"/>
 
     <div id="preview-container">
       <div id="preview">
         <div class="preview-holder" style="border: 1px solid rgba(125, 164, 238, 0.407);">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="0" loading="eager"/>
+          <Image src={Front3Small} class="preview-image" alt="renegade" data-nth="0" loading="eager"/>
         </div>
         <div class="preview-holder">
-          <Image src={Front2Small} class="preview-image" alt="renegade" data-nth="1" loading="eager"/>
+          <Image src={RenegadeFront2Small} class="preview-image" alt="renegade" data-nth="1" loading="eager"/>
         </div>
         <div class="preview-holder">
-          <Image src={Front3Small} class="preview-image" alt="renegade" data-nth="2" loading="eager"/>
+          <Image src={FromSideSmall} class="preview-image" alt="renegade" data-nth="2" loading="eager"/>
         </div>
         <div class="preview-holder">
-          <Image src={ProtectorSmall} class="preview-image" alt="renegade" data-nth="3" loading="eager"/>
+          <Image src={BackTopSmall} class="preview-image" alt="renegade" data-nth="3" loading="eager"/>
         </div>
         <div class="preview-holder">
-          <Image src={Front3Small} class="preview-image" alt="renegade" data-nth="4" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={ProtectorSmall} class="preview-image" alt="renegade" data-nth="5" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="6" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="7" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="8" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="9" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="10" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="11" loading="eager"/>
-        </div>
-        <div class="preview-holder">
-          <Image src={Front1Small} class="preview-image" alt="renegade" data-nth="12" loading="eager"/>
+          <Image src={BacksideSmall} class="preview-image" alt="renegade" data-nth="4" loading="eager"/>
         </div>
       </div>
     </div>
@@ -69,7 +47,7 @@ import Image from "astro/components/Image.astro";
 </div>
 
 <script type="module" defer>
-  let images = ["/renegade/front1.webp", "/renegade/front2.webp", "/renegade/front3.webp", "/renegade/protector.webp", "/renegade/front3.webp", "/renegade/protector.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp"];
+  let images = ["/renegade/front3.webp", "/renegade/renegade_front2.webp", "/renegade/from_side.webp", "/renegade/back_top.webp", "/renegade/backside.webp", "/renegade/front3.webp", "/renegade/protector.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp"];
   let previewImages = document.querySelectorAll(".preview-image");
   let img = document.getElementById("imag");
   const next = document.getElementById("next");
@@ -216,6 +194,7 @@ import Image from "astro/components/Image.astro";
 .preview-holder {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 5px;
   border: 1px solid rgba(255, 255, 255, 0.207);
 }
@@ -226,10 +205,11 @@ import Image from "astro/components/Image.astro";
 
 #preview img {
   width: 100px;
-  height: auto;
+  height: 76px;
   border-radius: 4px;
   cursor: pointer;
   user-select: none;
+  object-fit: contain;
 }
 
 @media (max-width: 1450px) {
