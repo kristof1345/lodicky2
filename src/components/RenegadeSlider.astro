@@ -6,6 +6,8 @@ import Front3Small from "../assets/renegade/front3_small.webp";
 import FromSideSmall from "../assets/renegade/from_side_small.webp"
 import ProtectorSmall from "../assets/renegade/protector_small.webp";
 import BacksideSmall from "../assets/renegade/backside_small.webp"
+import Shore1Small from "../assets/renegade/shore1_small.webp"
+
 import LeftArrow from "../assets/arrow-left2.svg";
 import RightArrow from "../assets/arrow-right2.svg";
 import Image from "astro/components/Image.astro";
@@ -32,6 +34,12 @@ import Image from "astro/components/Image.astro";
         <div class="preview-holder">
           <Image src={BacksideSmall} class="preview-image" alt="renegade" data-nth="4" loading="eager"/>
         </div>
+        <div class="preview-holder">
+          <Image src={ProtectorSmall} class="preview-image" alt="renegade" data-nth="5" loading="eager"/>
+        </div>
+        <div class="preview-holder">
+          <Image src={Shore1Small} class="preview-image" alt="renegade" data-nth="6" loading="eager"/>
+        </div>
       </div>
     </div>
 
@@ -47,7 +55,7 @@ import Image from "astro/components/Image.astro";
 </div>
 
 <script type="module" defer>
-  let images = ["/renegade/front3.webp", "/renegade/renegade_front2.webp", "/renegade/from_side.webp", "/renegade/back_top.webp", "/renegade/backside.webp", "/renegade/front3.webp", "/renegade/protector.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp", "/renegade/front1.webp"];
+  let images = ["/renegade/front3.webp", "/renegade/renegade_front2.webp", "/renegade/from_side.webp", "/renegade/back_top.webp", "/renegade/backside.webp", "/renegade/protector.webp", "/renegade/shore1.webp"];
   let previewImages = document.querySelectorAll(".preview-image");
   let img = document.getElementById("imag");
   const next = document.getElementById("next");
