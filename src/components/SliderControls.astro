@@ -1,0 +1,87 @@
+---
+import Image from "astro/components/Image.astro";
+import LeftArrow from "../assets/arrow-left2.svg";
+import RightArrow from "../assets/arrow-right2.svg";
+---
+
+<div class="controls">
+  <button id="prev">
+    <Image src={LeftArrow} alt="Previous" loading="lazy" />
+  </button>
+  <button id="next">
+    <Image src={RightArrow} alt="Next" loading="lazy" />
+  </button>
+</div>
+
+<script>
+  const next = document.getElementById("next");
+  const prev = document.getElementById("prev");
+  const row = document.getElementById("preview");
+
+  let scrollAmount = 0;
+  const scrollStep = 200;
+
+  // Event listener for the next button
+  next.addEventListener('click', () => {
+    const maxScroll = row.scrollWidth - row.parentElement.clientWidth;
+    if (scrollAmount < maxScroll) {
+      scrollAmount += scrollStep;
+      if (scrollAmount > maxScroll) {
+        scrollAmount = maxScroll;
+        next.style.opacity = "0";
+      }
+      row.style.transform = `translateX(-${scrollAmount}px)`;
+      prev.style.opacity = "1";
+    }
+  });
+
+  // Event listener for the previous button
+  prev.addEventListener('click', () => {
+    if (scrollAmount > 0) {
+      scrollAmount -= scrollStep;
+      if (scrollAmount < 0) {
+        scrollAmount = 0
+        prev.style.opacity = "0";
+      };
+      row.style.transform = `translateX(-${scrollAmount}px)`;
+      next.style.opacity = "1";
+    }
+  });
+</script>
+
+<style>
+  .controls {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 5px; */
+  margin-top: 7px;
+}
+
+#next, #prev {
+  background-color: rgba(125, 164, 238, 0.207);
+  color: black;
+  cursor: pointer;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+#prev {
+  /* display: none; */
+  opacity: 0;
+}
+
+#next:hover, #prev:hover {
+  background-color: rgba(125, 164, 238, 0.307);
+}
+
+#next img, #prev img {
+  width: 30px;
+  height: 30px;
+  user-select: none;
+}
+</style>
