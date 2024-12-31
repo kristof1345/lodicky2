@@ -13,7 +13,7 @@ import Image from "astro/components/Image.astro";
 			<h1>NL Zavážacie Loďky</h1>
 			<p class="subhead">Moderné zavážacie loďky ktoré fungujú spoľahlivo.</p>
 			<div class="buttons">
-				<a href="/lodky">Zavážacie loďky
+				<a href="/lodky" class="slight-blue">Zavážacie loďky
 					<Image src={RightArrow} alt="right arrow" loading="eager" />
 				</a>
 				<a href="#">Servis a Oprava
@@ -70,13 +70,17 @@ import Image from "astro/components/Image.astro";
 	font-weight: 500;
 }
 
+.slight-blue {
+	background-color: rgba(125, 164, 238, 0.2);
+}
+
 .buttons > a > img {
 	width: 25px;
 	height: 25px;
 }
 
 .buttons > a:hover {
-	background-color: rgba(125, 164, 238, 0.3);
+	background-color: rgba(125, 164, 238, 0.4);
 }
 
 @media (max-width: 1450px) {
