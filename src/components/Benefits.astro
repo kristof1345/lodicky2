@@ -1,0 +1,120 @@
+---
+import Image from "astro/components/Image.astro"
+
+import Guarantee from "../assets/guarantee.svg";
+import Time from "../assets/time.svg";
+import Servis from "../assets/servis.svg";
+import Delivery from "../assets/delivery.svg"
+---
+
+
+<div class="benefits">
+  <div class="benefit">
+    <Image src={Guarantee} alt="" />
+    <div class="benefit-txt">
+      <h3>Záruka</h3>
+      <p>2 roky záruky pre všetký loďky na stránke.</p>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <Image src={Time} alt="" />
+    <div class="benefit-txt">
+      <h3>Skúsenosť</h3>
+      <p>8+ rokov na trhu.</p>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <Image src={Servis} alt="" />
+    <div class="benefit-txt">
+      <h3>All-in-one Servis</h3>
+      <p>Servis vrámci SR.</p>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <Image src={Delivery} alt="" />
+    <div class="benefit-txt">
+      <h3>Doprava</h3>
+      <p>Doprava vrámci SR je ZADARMO.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 80px;
+}
+
+.benefit {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.benefit-txt > h3 {
+  font-weight: 600;
+}
+
+.benefit-txt > p {
+  font-size: 15px
+}
+
+.benefit > img {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 1450px) {
+  .benefits {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .benefits {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1040px) {
+.benefits {
+  padding: 20px 0px;
+}
+
+.benefit {
+  flex-basis: 23%;
+  gap: 10px;
+}
+
+.benefit > img {
+  width: 45px;
+  height: 45px;
+}
+}
+
+@media (max-width: 750px) {
+  .benefits {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+    gap: 25px;
+  }
+
+  .benefit {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 500px) {
+  .benefits {
+    width: 100%;
+    gap: 25px;
+  }
+}
+</style>
