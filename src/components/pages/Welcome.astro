@@ -3,6 +3,8 @@ import Header from "../../components/Header.astro";
 import Benefits from "../Benefits.astro";
 import RightArrow from "../../assets/arrow-right2.svg"
 
+import LodkyWelcome from "../LodkyWelcome.astro";
+
 import Image from "astro/components/Image.astro";
 ---
 
@@ -23,6 +25,10 @@ import Image from "astro/components/Image.astro";
 		</section>
 
 		<Benefits />
+
+		<div class="lodky-container">
+			<LodkyWelcome />
+		</div>
 	</main>
 </div>
 
@@ -81,6 +87,10 @@ import Image from "astro/components/Image.astro";
 
 .buttons > a:hover {
 	background-color: rgba(125, 164, 238, 0.4);
+}
+
+.lodky-container {
+	margin-top: 50px;
 }
 
 @media (max-width: 1450px) {
