@@ -1,8 +1,9 @@
 ---
 import Header from "../../components/Header.astro";
+import Footer from "../Footer.astro";
+
 import Image from "astro/components/Image.astro";
 import SpeedingSlider from "../../components/SpeedingSlider.astro";
-import Front5 from "../../assets/renegade/front5.webp";
 import BackAxo2 from "../../assets/renegade/from_back_axo2.webp";
 import Rozmetadlo from "../../assets/renegade/rozmetadlo.jpg";
 import FrontWRemote from "../../assets/renegade/front_w_remote.webp";
@@ -254,12 +255,15 @@ import SideAxo from "../../assets/speeding/side_axo.webp"
       </section>
     </div>
   </main>
+
+  <Footer />
 </div>
 
 <style>
   /* overwriting globals */
 .container {
   margin: 0 30px;
+  padding-bottom: 0;
 }
 
 .desc, .para {

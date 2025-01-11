@@ -1,5 +1,7 @@
 ---
 import Header from "../../components/Header.astro";
+import Footer from "../Footer.astro";
+
 import Image from "astro/components/Image.astro";
 import RenegadeSlider from "../../components/RenegadeSlider.astro";
 import Front5 from "../../assets/renegade/front5.webp";
@@ -252,12 +254,15 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
       </section>
     </div>
   </main>
+
+  <Footer />
 </div>
 
 <style>
   /* overwriting globals */
 .container {
   margin: 0 30px;
+  padding-bottom: 0;
 }
 
 .desc, .para {
