@@ -3,14 +3,14 @@ import Image from "astro/components/Image.astro"
 
 import Guarantee from "../assets/guarantee.svg";
 import Time from "../assets/time.svg";
-import Servis from "../assets/servis.svg";
+import Servis from "../assets/gear.svg";
 import Delivery from "../assets/delivery.svg"
 ---
 
 
 <div class="benefits">
   <div class="benefit">
-    <Image src={Guarantee} alt="" />
+    <Image src={Guarantee} alt="guarantee" class="first-img" />
     <div class="benefit-txt">
       <h3>Záruka</h3>
       <p>2 roky záruky pre všetký loďky na stránke.</p>
@@ -18,7 +18,7 @@ import Delivery from "../assets/delivery.svg"
   </div>
 
   <div class="benefit">
-    <Image src={Time} alt="" />
+    <Image src={Time} alt="time" />
     <div class="benefit-txt">
       <h3>Skúsenosť</h3>
       <p>8+ rokov na trhu.</p>
@@ -26,7 +26,7 @@ import Delivery from "../assets/delivery.svg"
   </div>
 
   <div class="benefit">
-    <Image src={Servis} alt="" />
+    <Image src={Servis} alt="servis" />
     <div class="benefit-txt">
       <h3>All-in-one Servis</h3>
       <p>Servis vrámci SR.</p>
@@ -34,7 +34,7 @@ import Delivery from "../assets/delivery.svg"
   </div>
 
   <div class="benefit">
-    <Image src={Delivery} alt="" />
+    <Image src={Delivery} alt="delivery" />
     <div class="benefit-txt">
       <h3>Doprava</h3>
       <p>Doprava vrámci SR je ZADARMO.</p>
@@ -57,12 +57,16 @@ import Delivery from "../assets/delivery.svg"
   gap: 12px;
 }
 
+.benefit-txt {
+  height: fit-content;
+}
+
 .benefit-txt > h3 {
   font-weight: 500;
 }
 
 .benefit-txt > p {
-  font-size: 15px
+  font-size: 15px;
 }
 
 .benefit > img {
@@ -93,8 +97,8 @@ import Delivery from "../assets/delivery.svg"
 }
 
 .benefit > img {
-  width: 42px;
-  height: 42px;
+  /* width: 42px; */
+  /* height: 42px; */
 }
 }
 
@@ -111,8 +115,14 @@ import Delivery from "../assets/delivery.svg"
   }
 
   .benefit > img {
+    flex-basis: 10%;
     width: 37px;
     height: 37px;
+  }
+
+  .first-img {
+    width: 42px !important;
+    height: 42px !important;
   }
 }
 
@@ -120,6 +130,10 @@ import Delivery from "../assets/delivery.svg"
   .benefits {
     width: 100%;
     gap: 25px;
+  }
+
+  .benefit > img {
+    flex-basis: 15%;
   }
 }
 </style>
