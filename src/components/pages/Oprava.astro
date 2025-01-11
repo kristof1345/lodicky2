@@ -1,0 +1,85 @@
+---
+import Header from "../Header.astro"
+import Footer from "../Footer.astro"
+---
+
+<div>
+  <Header />
+  <main class="container">
+    <section class="centered-sec">
+      <h1>Oprava A Servis</h1>
+      <div>
+        <p>Zdravím rybáry,ponúkám Vám službu opravu a servis zavážacích loďiek. Mám viac než 8 ročný prax ,za tú dobu úspešne som opravil,prerobil a vyrobil veľa typov. 
+          Montujem aj sonar ,Ovládanie podla Gps,vyrábám Li-ion batérie. Neváhajte ma kontaktovať.</p>
+
+        <ul class="content-bullets">
+          <li class="content-bullet">Warrior</li>
+          <li class="content-bullet">Prisma</li>
+          <li class="content-bullet">Carponizer</li>
+          <li class="content-bullet">Jabo</li>
+          <li class="content-bullet">Carpscout</li>
+          <li class="content-bullet">Shark</li>
+          <li class="content-bullet">Baitliner</li>
+          <li class="content-bullet">Carp Royal</li>
+          <li class="content-bullet">Space Boad</li>
+          <li class="content-bullet">Flytec</li>
+          <li class="content-bullet">atď...</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</div>
+
+<style>
+  .container {
+    margin: 0 20px;
+  }
+
+  section h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-bottom: 12px;
+  }
+
+  .centered-sec {
+    margin: 0 auto 0 auto;
+    width: 820px;
+  }
+
+  .content-bullets {
+    padding-left: 30px;
+    margin: 20px 0;
+  }
+
+  .content-bullet {
+    padding-bottom: 12px;
+    font-size: 17px;
+  }
+
+  .boldb {
+    font-weight: 600;
+  }
+
+  @media (max-width: 1040px) {
+    .centered-sec {
+      width: 650px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .container {
+      margin: 0 10px;
+    }
+
+    .centered-sec {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    section h1 {
+      font-size: 2.1rem;
+    }
+  }
+</style>
