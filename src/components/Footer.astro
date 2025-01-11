@@ -1,0 +1,54 @@
+---
+import Mail from "../assets/mail.svg";
+import Phone from "../assets/phone.svg";
+
+import Image from "astro/components/Image.astro";
+---
+
+<footer>
+  <div class="contacts">
+    <h4>Kontakty</h4>
+    <div>
+      <Image src={Mail} alt="email" class="footer-img" />
+      <span class="footer-txt">ludovitnemeth@zoznam.sk</span>
+    </div>
+    <div>
+      <Image src={Phone} alt="phone" class="footer-img" />
+      <span class="footer-txt">0903 763 323</span>
+    </div>
+  </div>
+
+  <!-- <div class="info">
+    <h4>Informácie</h4>
+  </div> -->
+</footer>
+
+
+<style>
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.contacts {
+  width: min-content;
+}
+
+.contacts > div {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.footer-img {
+  width: 30px;
+  height: 30px;
+}
+</style>
