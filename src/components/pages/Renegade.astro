@@ -11,10 +11,15 @@ import FrontWRemote from "../../assets/renegade/front_w_remote.webp";
 import FrontAxo from "../../assets/renegade/front_axo.webp";
 import FromTopSide from "../../assets/renegade/from_top_side.webp";
 import Backside from "../../assets/renegade/backside.webp";
-import RenegadeFront from "../../assets/renegade/renegade_front2.webp"
-import FromSide from "../../assets/renegade/from_side.webp"
-import Shore3Fitted from "../../assets/renegade/shore3_fitted.webp"
-import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
+import RenegadeFront from "../../assets/renegade/renegade_front2.webp";
+import FromSide from "../../assets/renegade/from_side.webp";
+import Shore3Fitted from "../../assets/renegade/shore3_fitted.webp";
+import FromBackAxo from "../../assets/renegade/from_back_axo.webp";
+import Stojan1 from "../../assets/renegade/stand_front_axo.webp";
+import Stojan2 from "../../assets/renegade/stand_side.webp";
+import Solar1 from "../../assets/renegade/solar_panel.webp";
+import Solar2 from "../../assets/renegade/solar_package.webp";
+import Solar3 from "../../assets/renegade/solar_cables.webp";
 ---
 
 <div id="container">
@@ -28,11 +33,7 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
         <div class="intro">
           <h1 class="desktop-h1">Zavážacia loďka Renegade</h1>
           <p class="desc">
-            Renegade je inteligentná zavažacia lodička vytvorená pre kaprárov,
-          ktorí chcú loviť ťažko dostupné miesta, o ktorých iný rybári iba
-          snívajú. Zabudovaný sonar vám umožní vidieť hĺbku vody a nájsť miesta,
-          kde veľké kapry radi hodia jesť. Loďka je vybavená aj s GPS-om a
-          Autopilotom, ktorý pamätá polohu vášho lovného miesta.
+            Renegade je inteligentná zavážacia lodička určená pre kaprárov, ktorí chcú loviť ťažko dostupné miesta. Loďka je vybavená zabudovaným sonárom, GPS a Autopilotom, v All-In-One ovládačom s farebným displejom a Slovenským menu.
           </p>
           <p class="para">
             Dostupnosť<span class="spacer"> - - - - - </span>
@@ -94,54 +95,56 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
 
         <ul class="content-bullets">
           <li class="content-bullet boldb">
-            Li-ion batérie 2 x 12,6V/15,6Ah(viem dodať aj silnejšie, až 24Ah),
-            výdrž na jedno nabitie je 6-7 hodín.
+            Li-ion batérie 2x 12,6V/15,6Ah(viem vyrobiť aj silnejšie, až 2x 40Ah, ale samozrejme aj iné kapacity), výdrž na jedno nabitie je 6-7 hodín.
+          </li>
+          <li class="content-bullet">
+            Sonar: Loďka je vybavená s farebným sonárom s hĺbkovou detekciou do 70m, ktorý identifikuje štruktúru dna, hĺbku vody a lokalitu rýb.
+            Displej sonára je zabudovaný do ovládača.
+          </li>
+          <li class="content-bullet boldb">
+            Vďaka GPS a Autopilot viete uložiť 30 pozicií, ktoré loďka vie veľmi
+            presne nájsť.
+          </li>
+          <li class="content=bullet">
+            Slovenské menu.
+          </li>
+          <li class="content-bullet">
+            Loďka má radiový systém s 2,4Ghz s dosahom 500 metrov.
           </li>
           <li class="content-bullet">
             2 komory s nosnosťou 4kg ktoré sa otvárajú zospodu buď naraz alebo
             jednotlivo.
           </li>
-          <li class="content-bullet boldb">
-            Loďka je vybavená s farebným sonárom s hĺbkovou detekciou do 70m,
-            ktorý identifikuje štruktúru dna, hĺbku vody a lokalitu ryby.
-            Displej sonára je zabudovaný do ovládača.
-          </li>
           <li class="content-bullet">
-            Vďaka GPS a Autopilot viete uložiť 30 pozicií, ktoré loďka vie veľmi
-            presne najsť.
-          </li>
-          <li class="content-bullet boldb">
             1 hák na montáž je v zadu, ktorý je možno vypustiť jednotlivo alebo
             naraz.
           </li>
           <li class="content-bullet">
-            Loďka má radioový systém s 2,4Ghz s dosahom 500 metrov.
-          </li>
-          <li class="content-bullet boldb">
             Rýchlosť je 60/70 metrov za minutu.
           </li>
           <li class="content-bullet">
             Rozmery: dĺžka 65cm, šírka 44cm, výška 24cm.
           </li>
-          <li class="content-bullet boldb">Váha 8,5kg(s batériami).</li>
+          <li class="content-bullet">Váha 8,5kg(s batériami).</li>
           <li class="content-bullet">
             Dá sa naprogramovať, aby automaticky otvoril komory, keď dorazí na
             označení bod.
           </li>
-          <li class="content-bullet boldb">
+          <li class="content-bullet">
             Lodičku treba nakalibrovať pred použitím GPS.
           </li>
           <li class="content-bullet">
             Automatický návrat na “home point” pri strate signálu alebo keď sú
             slabé batérie.
           </li>
-          <li class="content-bullet boldb">Doprava zadarmo v rámci SR.</li>
           <li class="content-bullet">Vrtule sú chránené proti zamotaniu do silónu alebo vodných rastlín.</li>
+          <li class="content-bullet boldb">Doprava zadarmo v rámci SR.</li>
         </ul>
 
         <div class="image-sec">
+          <!-- previosly front5 -->
           <Image
-            src={Front5}
+            src={RenegadeFront}
             alt="renegade"
             loading="lazy"
             class="ren-image"
@@ -151,7 +154,7 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
         <div class="content-sec">
           <h3>Servis</h3>
           <ul class="content-bullets">
-            <li class="content-bullet">Viac ako 8 rokov skúsenosti v oprave zavažacích loďičiek.</li>
+            <li class="content-bullet">Som výhradný predajca na Slovensku s viac ako 8 rokov skúsenosti v oprave zavažacích loďičiek.</li>
             <li class="content-bullet">Servis vrámci SR.</li>
             <li class="content-bullet">Záruka na 2 roky.</li>
             <li class="content-bullet">Všetky lodičky sú skúšané a testované na vode pred predajom.</li>
@@ -168,7 +171,7 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
 
         <div class="content-sec">
           <h3>Balenie</h3>
-          <p class="para">Balenie: Lodička + prepravná taška, 2x Batérie, Nabýjačka pre lodičku a pre ovládač, Ovládač + ochranná taška.</p>
+          <p class="para">Balenie: Lodička + prepravná taška, 2x Batérie, Nabýjačka pre lodičku a pre ovládač, Ovládač + ochranná taška. Slovenský manuál.</p>
         </div>
 
         <div class="content-sec">
@@ -176,19 +179,63 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
           <p class="para">Dá sa doobjednať rozmetovač krmiva, podvodnú kameru a solárni panel na
             dobíjanie baterií s výkonom 150W.</p>
           <ul class="content-bullets">
-            <li class="content-bullet">Rozmetadlo - 170€</li>
+            <li class="content-bullet">Stojan spolu s rásoškami - 85€</li>
+            <li class="content-bullet">Rozmetadlo - 180€</li>
             <li class="content-bullet">Podvodná kamera - 340€</li>
             <li class="content-bullet">Solárný panel - 190€</li>
           </ul>
-          <h4>Rozmetadlo</h4>
+
+          <h4>Stojan spolu s rásoškami</h4>
           <div class="image-sec">
             <Image
-            src={Rozmetadlo}
-            alt="renegade"
-            loading="lazy"
+              src={Stojan1}
+              alt="stojan"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={Stojan2}
+              alt="stojan"
+              loading="lazy"
               class="ren-image"
             />
           </div>
+
+          <h4>Solárný panel</h4>
+          <div class="image-sec">
+            <Image
+              src={Solar1}
+              alt="solárný panel"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={Solar2}
+              alt="solárný panel"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={Solar3}
+              alt="solárný panel"
+              loading="lazy"
+              class="ren-image"
+            />
+          </div>
+
+          <h4>Rozmetadlo</h4>
+          <div class="image-sec">
+            <Image
+              src={Rozmetadlo}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image"
+            />
+          </div>
+
+          <p class="desc">
+            Ak máte záujem o lodičke kontaktujte ma cez telefón alebo email.
+          </p>
         </div>
         
         <div class="content-">
@@ -232,6 +279,12 @@ import FromBackAxo from "../../assets/renegade/from_back_axo.webp"
             />
             <Image
               src={Backside}
+              alt="renegade"
+              loading="lazy"
+              class="ren-image"
+            />
+            <Image
+              src={Front5}
               alt="renegade"
               loading="lazy"
               class="ren-image"
