@@ -9,8 +9,10 @@ import Footer from "../Footer.astro"
     <section class="centered-sec">
       <h1>Oprava A Servis</h1>
       <div>
-        <p>Zdravím rybáry,ponúkám Vám službu opravu a servis zavážacích loďiek. Mám viac než 8 ročný prax ,za tú dobu úspešne som opravil,prerobil a vyrobil veľa typov. 
-          Montujem aj sonar ,Ovládanie podla Gps,vyrábám Li-ion batérie. Neváhajte ma kontaktovať.</p>
+        <p class="desc">Zdravím rybáry, ponúkám Vám opravu a servis zavážacích loďiek. Mám viac než <strong>8 ročný prax</strong>, a za tú dobu úspešne som opravil, prerobil a vyrobil veľa typov. 
+          Montujem sonar, GPS, vyrábám Li-ion batérie, atď...</p>
+
+        <p class="desc">V prípade otázok ma neváhajte <a href="/kontakt">kontaktovať</a>.</p>
 
         <ul class="content-bullets">
           <li class="content-bullet">Warrior</li>
@@ -34,6 +36,14 @@ import Footer from "../Footer.astro"
 <style>
   .container {
     margin: 0 20px;
+  }
+
+  .desc {
+  line-height: 1.7;
+  }
+
+  .desc {
+    margin-bottom: 15px
   }
 
   section h1 {
